@@ -15,20 +15,20 @@ services:
     volumes:
     - .:/app
 
-  webserver:
-    hostname: webserver
-    build:
-      context: webserver
-      dockerfile: Dockerfile
-    image: iris-fhir-interop:webserver
-    container_name: webserver
-    init: true
-    depends_on:
-      - iris
-    ports:
-    - "80:80"
-    - "443:443"
-    volumes:
-    - ./webserver:/webserver
-    environment:
-    - ISC_DATA_DIRECTORY=/webserver
+#  webserver:
+#    hostname: webserver
+#    build:
+#      context: webserver
+#      dockerfile: Dockerfile
+#    image: iris-fhir-interop:webserver
+#    container_name: webserver
+#    init: true
+#    depends_on:
+#      - iris
+#    ports:
+#    - "80:80"
+#    - "443:443"
+#    volumes:
+#    - ./webserver:/webserver
+#    environment:
+#    - ISC_DATA_DIRECTORY=/webserver
